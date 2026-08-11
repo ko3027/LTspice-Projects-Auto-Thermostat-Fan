@@ -444,6 +444,7 @@ MOSFET의 실제 도통저항
 
 따라서 현재 결과를 완제품 성능으로 과장하지 않고, 회로 및 열 제어 개념을 검증한 1차 시뮬레이션 결과로 정의하였다. 겨울방학에는 실제 부품을 이용해 브레드보드 또는 PCB 수준의 검증을 진행하고, 시뮬레이션 파라미터와 실측 데이터를 비교할 계획이다.
 
+<img width="743" height="360" alt="시행착오 1" src="https://github.com/user-attachments/assets/9c0d515e-ed46-4774-be12-161aef33f102" />
 
 
 
@@ -1081,6 +1082,7 @@ MOSFET RDS(on)을 온도 함수로 설정
 
 시뮬레이션 파라미터를 임의값으로 끝내지 않고 실제 측정값으로 보정하면, 열 모델의 예측 정확도를 높일 수 있다.
 
+<img width="788" height="299" alt="시행착오2" src="https://github.com/user-attachments/assets/44cfb652-0293-4fdd-9e2e-489083970d5d" />
 
 
 ⚡ 시행착오 03. 온도를 직접 비교하려던 오류와 NTC 분압전압을 기준으로 설계를 다시 시작한 과정
@@ -2330,6 +2332,7 @@ MOSFET 스위칭 횟수 감소
 
 따라서 히스테리시스는 단순한 회로 안정화 기능이 아니라 열 스트레스와 팬 수명 사이의 절충 조건으로 설계해야 한다.
 
+<img width="718" height="517" alt="시뮬 시행착오4" src="https://github.com/user-attachments/assets/d018a8b8-5951-4591-93ad-98bafd03ada2" />
 
 
 
@@ -2887,6 +2890,7 @@ MOSFET이 안 켜진다.
 
 이 과정을 통해 회로 설계는 부품을 연결하는 작업이 아니라, 먼저 시스템의 상태와 에너지 흐름을 정의한 뒤 각 기능을 회로 블록으로 구현하는 과정이라는 것을 배웠다.
 
+<img width="605" height="449" alt="시행착오5" src="https://github.com/user-attachments/assets/f8aa827c-72b4-40d7-a0b4-74edcfeadf36" />
 
 
 
