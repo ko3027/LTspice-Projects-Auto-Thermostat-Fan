@@ -1,1 +1,0 @@
-# LTspice-Projects-Auto-Thermostat-Fan
