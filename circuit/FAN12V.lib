@@ -1,0 +1,35 @@
+* 12V 2-wire BLDC fan equivalent model
+* Pins: PLUS MINUS RPM_OUT
+
+.subckt FAN12V PLUS MINUS RPM_OUT
+.param Rm=30
+.param Lm=2m
+.param Ke=24m
+.param Kt=24m
+.param Jm=20u
+.param Bm=1u
+.param Kfan=33n
+
+* Electrical winding equivalent
+Rmotor PLUS N1 {Rm}
+Lmotor N1 N2 {Lm}
+Vsense N2 N3 0
+
+* Motor back-EMF
+Bbemf N3 MINUS V={Ke*V(SPEED)}
+
+* Mechanical inertia and bearing friction
+Cinertia SPEED 0 {Jm} IC=0
+Rfriction SPEED 0 {1/Bm}
+
+* Electromagnetic torque
+Btorque 0 SPEED I={Kt*I(Vsense)}
+
+* Fan aerodynamic load
+Bair SPEED 0 I={Kfan*V(SPEED)*abs(V(SPEED))}
+
+* Speed output: 1V = 1RPM
+Brpm RPM_OUT 0 V={V(SPEED)*9.5492966}
+Rrpm RPM_OUT 0 1G
+
+.ends FAN12V
