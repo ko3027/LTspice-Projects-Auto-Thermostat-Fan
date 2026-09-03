@@ -1,0 +1,8 @@
+* Simple 5 V brushed DC hand-fan motor equivalent for LTspice
+* Pins: +  -  RPM(output voltage, 1 V = 1000 rpm)
+.subckt FAN5V P N RPM
+Rcoil P X 8
+Lcoil X N 300u
+Bspeed RPM 0 V={limit(V(P,N),0,5)*2.0}
+Rrpm RPM 0 1Meg
+.ends FAN5V
